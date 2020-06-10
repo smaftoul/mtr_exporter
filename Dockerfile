@@ -5,4 +5,4 @@ FROM alpine:3.6
 COPY --from=builder /go/bin/mtr_exporter .
 RUN apk add --no-cache --update mtr
 EXPOSE 9116
-ENTRYPOINT ./mtr_exporter
+ENTRYPOINT ["./mtr_exporter"]
